@@ -1,0 +1,69 @@
+@import 'base.scss';
+
+:root {
+  /* Font */
+  --ngx-ui-primary-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --ngx-ui-secondary-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* Primary */
+  --ngx-ui-primary-ultra-light: #E0FCFF;
+  --ngx-ui-primary-super-light: #BEF8FD;
+  --ngx-ui-primary-lighter: #87EAF2;
+  --ngx-ui-primary-light: #54D1DB;
+  --ngx-ui-primary: #38BEC9;
+  --ngx-ui-primary-dark: #2CB1BC;
+  --ngx-ui-primary-darker: #14919B;
+  --ngx-ui-primary-super-dark: #0E7C86;
+  --ngx-ui-primary-ultra-dark: #0A6C74;
+  /* Neutral */
+  --ngx-ui-neutral-ultra-light: #FAFAFA;
+  --ngx-ui-neutral-super-light: #D9E2EC;
+  --ngx-ui-neutral-lighter: #BCCCDC;
+  --ngx-ui-neutral-light: #9FB3C8;
+  --ngx-ui-neutral: #829AB1;
+  --ngx-ui-neutral-dark: #627D98;
+  --ngx-ui-neutral-darker: #486581;
+  --ngx-ui-neutral-super-dark: #334E68;
+  --ngx-ui-neutral-ultra-dark: #243B53;
+  /* Accent warning */
+  --ngx-ui-warning-ultra-light: #FFFBEA;
+  --ngx-ui-warning-super-light: #FFF3C4;
+  --ngx-ui-warning-lighter: #FCE588;
+  --ngx-ui-warning-light: #FADB5F;
+  --ngx-ui-warning: #F7C948;
+  --ngx-ui-warning-dark: #F0B429;
+  --ngx-ui-warning-darker: #F0B429;
+  --ngx-ui-warning-super-dark: #CB6E17;
+  --ngx-ui-warning-ultra-dark: #B44D12;
+  /* Accent error */
+  --ngx-ui-error-ultra-light: #FFBDBD;
+  --ngx-ui-error-super-light: #FF9B9B;
+  --ngx-ui-error-lighter: #F86A6A;
+  --ngx-ui-error-light: #EF4E4E;
+  --ngx-ui-error: #E12D39;
+  --ngx-ui-error-dark: #CF1124;
+  --ngx-ui-error-darker: #AB091E;
+  --ngx-ui-error-super-dark: #8A041A;
+  --ngx-ui-error-ultra-dark: #610316;
+  /* Accent success */
+  --ngx-ui-success-ultra-light: #EFFCF6;
+  --ngx-ui-success-super-light: #C6F7E2;
+  --ngx-ui-success-lighter: #8EEDC7;
+  --ngx-ui-success-light: #65D6AD;
+  --ngx-ui-success: #3EBD93;
+  --ngx-ui-success-dark: #27AB83;
+  --ngx-ui-success-darker: #199473;
+  --ngx-ui-success-super-dark: #147D64;
+  --ngx-ui-success-ultra-dark: #0C6B58;
+  /* Accent info */
+  --ngx-ui-information-ultra-light: #DCEEFB;
+  --ngx-ui-information-super-light: #B6E0FE;
+  --ngx-ui-information-lighter: #84C5F4;
+  --ngx-ui-information-light: #62B0E8;
+  --ngx-ui-information: #4098D7;
+  --ngx-ui-information-dark: #2680C2;
+  --ngx-ui-information-darker: #186FAF;
+  --ngx-ui-information-super-dark: #0F609B;
+  --ngx-ui-information-ultra-dark: #0A558C;
+  /* Other */
+  --ngx-ui-text-color: #dfdfdf;
+}
