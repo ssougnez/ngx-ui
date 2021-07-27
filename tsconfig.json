@@ -12,7 +12,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "paths": {
-      "ngx-ui": [
+      "@ngx-ui": [
         "dist/ngx-ui/ngx-ui",
         "dist/ngx-ui"
       ]
