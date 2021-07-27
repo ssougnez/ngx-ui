@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --ngx-ui-primary-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--ngx-ui-primary-family);
+}

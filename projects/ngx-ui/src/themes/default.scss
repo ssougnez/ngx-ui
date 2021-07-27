@@ -1,6 +1,8 @@
 @import 'base.scss';
 
 :root {
+  /* Golden ratio */
+  --ngx-ui-ratio: 1.618;
   /* Font */
   --ngx-ui-primary-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --ngx-ui-secondary-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -66,4 +68,5 @@
   --ngx-ui-information-ultra-dark: #0A558C;
   /* Other */
   --ngx-ui-text-color: #dfdfdf;
+  --ngx-ui-radius: .5rem;
 }

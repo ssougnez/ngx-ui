@@ -1,3 +1,89 @@
-ngx-ui-button {
-  
+[ngx-ui-button] {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-bottom-width: 3px;
+  padding: .6rem calc(.6rem * var(--ngx-ui-ratio));
+  font-family: var(--ngx-ui-primary-family);
+  cursor: pointer;
+  border-radius: var(--ngx-ui-radius);
+  font-size: .9rem;
+  font-weight: 500;
+  box-shadow: 0 3px 1px -2px var(--ngx-ui-neutral-light);
+
+  &:focus {
+    outline: none;
+  }
+
+  &.ngx-ui-button-primary {
+    background-color: var(--ngx-ui-primary);
+    color: var(--ngx-ui-primary-ultra-light);
+    border-color: var(--ngx-ui-primary-ultra-dark);
+
+    &:focus {
+      background-color: var(--ngx-ui-primary-dark);
+    }
+
+    &:active {
+      background-color: var(--ngx-ui-primary-darker);
+    }
+  }
+
+  &.ngx-ui-button-success {
+    background-color: var(--ngx-ui-success);
+    color: var(--ngx-ui-success-ultra-light);
+    border-color: var(--ngx-ui-success-ultra-dark);
+
+    &:focus {
+      background-color: var(--ngx-ui-success-dark);
+    }
+
+    &:active {
+      background-color: var(--ngx-ui-success-darker);
+    }
+  }
+
+  &.ngx-ui-button-information {
+    background-color: var(--ngx-ui-information);
+    color: var(--ngx-ui-information-ultra-light);
+    border-color: var(--ngx-ui-information-ultra-dark);
+
+    &:focus {
+      background-color: var(--ngx-ui-information-dark);
+    }
+
+    &:active {
+      background-color: var(--ngx-ui-information-darker);
+    }
+  }
+
+  &.ngx-ui-button-warning {
+    background-color: var(--ngx-ui-warning);
+    color: var(--ngx-ui-warning-ultra-light);
+    border-color: var(--ngx-ui-warning-ultra-dark);
+
+    &:focus {
+      background-color: var(--ngx-ui-warning-dark);
+    }
+
+    &:active {
+      background-color: var(--ngx-ui-warning-darker);
+    }
+  }
+
+  &.ngx-ui-button-error {
+    background-color: var(--ngx-ui-error);
+    color: var(--ngx-ui-error-ultra-light);
+    border-color: var(--ngx-ui-error-ultra-dark);
+
+    &:focus {
+      background-color: var(--ngx-ui-error-dark);
+    }
+
+    &:active {
+      background-color: var(--ngx-ui-error-darker);
+    }
+  }
 }
