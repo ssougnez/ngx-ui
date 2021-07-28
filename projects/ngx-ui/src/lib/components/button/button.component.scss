@@ -17,6 +17,34 @@
     outline: none;
   }
 
+  &.ngx-ui-button-auto {
+    width: initial;
+  }
+
+  &.ngx-ui-button-xs {
+    width: 5rem;
+  }
+
+  &.ngx-ui-button-s {
+    width: 8rem;
+  }
+
+  &.ngx-ui-button-m {
+    width: 12rem;
+  }
+
+  &.ngx-ui-button-l {
+    width: 17rem;
+  }
+
+  &.ngx-ui-button-xl {
+    width: 23rem;
+  }
+
+  &.ngx-ui-button-fw {
+    width: 100%;
+  }
+
   &.ngx-ui-button-primary {
     background-color: var(--ngx-ui-primary);
     color: var(--ngx-ui-primary-ultra-light);

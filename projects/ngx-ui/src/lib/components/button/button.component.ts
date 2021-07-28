@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { ColorScheme } from '../../common';
+import { ColorScheme, Size } from '../../common';
 
 @Component({
   selector: '[ngx-ui-button]',
@@ -8,11 +8,7 @@ import { ColorScheme } from '../../common';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    '[class.ngx-ui-button-primary]': 'color === "primary"',
-    '[class.ngx-ui-button-success]': 'color === "success"',
-    '[class.ngx-ui-button-information]': 'color === "information"',
-    '[class.ngx-ui-button-warning]': 'color === "warning"',
-    '[class.ngx-ui-button-error]': 'color === "error"',
+    '[class]': '"ngx-ui-button-" + color + " ngx-ui-button-" + size'
   }
 })
 export class ButtonComponent {
@@ -21,6 +17,9 @@ export class ButtonComponent {
 
   @Input()
   public color: ColorScheme = 'primary';
+
+  @Input()
+  public size: Size = 'auto';
 
   /******************************************************** VARIABLES ********************************************************/
 
