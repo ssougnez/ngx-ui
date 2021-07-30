@@ -1,5 +1,25 @@
-/********************************************************** FLEX **********************************************************/
+/********************************************************** GENERIC **********************************************************/
 
+.ngx-ui-fgc-primary {
+  color: var(--ngx-ui-primary);
+}
+
+.ngx-ui-fgc-information {
+  color: var(--ngx-ui-information);
+}
+
+.ngx-ui-fgc-success {
+  color: var(--ngx-ui-success);
+}
+
+.ngx-ui-fgc-warning {
+  color: var(--ngx-ui-warning);
+}
+.ngx-ui-fgc-error {
+  color: var(--ngx-ui-error);
+}
+
+/********************************************************** FLEX **********************************************************/
 .flex-row {
   display: flex;
   flex-direction: row;

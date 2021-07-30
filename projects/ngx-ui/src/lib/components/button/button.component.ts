@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { ColorScheme, Size } from '../../common';
+import { ColorScheme, IconBrush, Size } from '../../common';
 
 @Component({
   selector: '[ngx-ui-button]',
@@ -16,10 +16,19 @@ export class ButtonComponent {
   /******************************************************** BINDINGS ********************************************************/
 
   @Input()
-  public color: ColorScheme = 'primary';
+  public color: ColorScheme | 'secondary' = 'primary';
 
   @Input()
   public size: Size = 'auto';
+
+  @Input()
+  public icon: string | null = null;
+
+  @Input()
+  public brush: IconBrush = 's';
+
+  @Input()
+  public iconPosition: 'left' | 'right' = 'left';
 
   /******************************************************** VARIABLES ********************************************************/
 
