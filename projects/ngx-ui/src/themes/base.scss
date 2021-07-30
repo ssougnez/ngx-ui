@@ -15,11 +15,13 @@
 .ngx-ui-fgc-warning {
   color: var(--ngx-ui-warning);
 }
+
 .ngx-ui-fgc-error {
   color: var(--ngx-ui-error);
 }
 
 /********************************************************** FLEX **********************************************************/
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -294,4 +296,18 @@
 
 .bl-2 {
   border-left: 2px solid var(--ng-ui-neutral-super-light);
+}
+
+/********************************************************************************** GAP **********************************************************************************/
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
 }
