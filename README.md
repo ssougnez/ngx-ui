@@ -1,3 +1,3 @@
-# ngx-ui
+# Documentation
 
-Library in development... Documentation will come soon...
+https://ssougnez.github.io/
