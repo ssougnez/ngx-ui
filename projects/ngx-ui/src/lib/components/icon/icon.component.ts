@@ -42,9 +42,10 @@ export class IconDirective implements OnChanges {
 
   /** */
   public ngOnChanges() {
-    const classes = [this._stylesClasses[this.brush], `fa-${this.icon}`];
+    const classes = [this._stylesClasses[this.brush] || 'fas'];
 
-    this.fw === true && classes.push('fa-fw');
+    this.icon && classes.push(`fa-${this.icon}`);
+    this.fw !== false && classes.push('fa-fw');
     this.color && classes.push(`ngx-ui-fgc-${this.color}`);
     this.animation && classes.push(`fa-${this.animation}`);
 

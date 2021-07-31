@@ -1,6 +1,6 @@
 <h1>Icons</h1>
 
-<div class="flex-column gap-1">
+<div class="flex-row gap-1">
   <ngx-ui-icon icon="bell"></ngx-ui-icon>
   <ngx-ui-icon icon="bell" brush="r"></ngx-ui-icon>
   <ngx-ui-icon icon="bell" brush="r" [fw]="false"></ngx-ui-icon>
@@ -10,55 +10,75 @@
 
 <h1>Buttons</h1>
 
-<div class="mb-1">
-  <button ngx-ui-button size="m">Primary</button>
-</div>
-<div class="mb-1">
-  <button ngx-ui-button size="m" disabled>Primary disabled</button>
-</div>
-
-<div class="mb-1">
-  <button ngx-ui-button color="secondary" size="m">Secondary</button>
-</div>
-<div class="mb-1">
-  <button ngx-ui-button color="secondary" size="m" disabled>Secondary disabled</button>
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary">Primary</button>
+  <button ngx-ui-button color="secondary">Secondary</button>
+  <button ngx-ui-button color="success">Success</button>
+  <button ngx-ui-button color="information">Information</button>
+  <button ngx-ui-button color="warning">Warning</button>
+  <button ngx-ui-button color="error">Error</button>
 </div>
 
-<div class="mb-1">
-  <button ngx-ui-button color="success" size="m">Success</button>
-</div>
-<div class="mb-1">
-  <button ngx-ui-button color="success" size="m" disabled>Success disabled</button>
-</div>
-
-<div class="mb-1">
-  <button ngx-ui-button color="information" size="m">Information</button>
-</div>
-<div class="mb-1">
-  <button ngx-ui-button color="information" size="m" disabled>Information disabled</button>
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary" icon="bell">Bell</button>
+  <button ngx-ui-button color="secondary" icon="cloud">Cloud</button>
+  <button ngx-ui-button color="success" icon="check">Check</button>
+  <button ngx-ui-button color="information" icon="info">Info</button>
+  <button ngx-ui-button color="warning" icon="exclamation">Exclamation</button>
+  <button ngx-ui-button color="error" icon="times">Times</button>
 </div>
 
-<div class="mb-1">
-  <button ngx-ui-button color="warning" size="m">Warning</button>
-</div>
-<div class="mb-1">
-  <button ngx-ui-button color="warning" size="m" disabled>Warning disabled</button>
-</div>
-
-<div class="mb-1">
-  <button ngx-ui-button color="error" icon="bell" size="m">Error</button>
-</div>
-<div class="mb-1">
-  <button ngx-ui-button color="error" icon="bell" size="m" disabled>Error disabled</button>
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary" icon="bell" iconPosition="right">Bell</button>
+  <button ngx-ui-button color="secondary" icon="cloud" iconPosition="right">Cloud</button>
+  <button ngx-ui-button color="success" icon="check" iconPosition="right">Check</button>
+  <button ngx-ui-button color="information" icon="info" iconPosition="right">Info</button>
+  <button ngx-ui-button color="warning" icon="exclamation" iconPosition="right">Exclamation</button>
+  <button ngx-ui-button color="error" icon="times" iconPosition="right">Times</button>
 </div>
 
-<div class="mb-1">
-  <button ngx-ui-button color="error" icon="bell">Error</button>
-</div>
-<div class="mb-1">
-  <button ngx-ui-button color="error" icon="bell" brush="r">Error</button>
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary" icon="bell"></button>
+  <button ngx-ui-button color="secondary" icon="cloud"></button>
+  <button ngx-ui-button color="success" icon="check"></button>
+  <button ngx-ui-button color="information" icon="info"></button>
+  <button ngx-ui-button color="warning" icon="exclamation"></button>
+  <button ngx-ui-button color="error" icon="times"></button>
 </div>
 
-<div class="mb-1">
-  <button ngx-ui-button color="error" icon="bell" brush="r"></button>
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary" icon="bell" [light]="true">Primary</button>
+  <button ngx-ui-button color="secondary" icon="cloud" [light]="true">Secondary</button>
+  <button ngx-ui-button color="success" icon="check" [light]="true">Success</button>
+  <button ngx-ui-button color="information" icon="info" [light]="true">Information</button>
+  <button ngx-ui-button color="warning" icon="exclamation" [light]="true">Warning</button>
+  <button ngx-ui-button color="error" icon="times" [light]="true" icon="times">Error</button>
+</div>
+
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary" icon="bell" iconBrush="s">Primary</button>
+  <button ngx-ui-button color="primary" icon="bell" iconBrush="r">Secondary</button>
+</div>
+
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary" icon="bell" iconAnimation="spin">Primary</button>
+  <button ngx-ui-button color="primary" icon="bell" iconAnimation="pulse">Secondary</button>
+</div>
+
+<div class="flex-row gap-1 mb-1">
+  <button ngx-ui-button color="primary" [isDisabled]="true">Primary</button>
+  <button ngx-ui-button color="secondary" [isDisabled]="true">Secondary</button>
+  <button ngx-ui-button color="success" [isDisabled]="true">Success</button>
+  <button ngx-ui-button color="information" [isDisabled]="true">Information</button>
+  <button ngx-ui-button color="warning" [isDisabled]="true">Warning</button>
+  <button ngx-ui-button color="error" [isDisabled]="true">Error</button>
+</div>
+
+<div class="flex-column gap-1 mb-1">
+  <button ngx-ui-button color="primary" size="xs">xs</button>
+  <button ngx-ui-button color="secondary" size="s">s</button>
+  <button ngx-ui-button color="success" size="m">m</button>
+  <button ngx-ui-button color="information" size="l">l</button>
+  <button ngx-ui-button color="warning" size="xl">xl</button>
+  <button ngx-ui-button color="error" size="fw">fw</button>
 </div>

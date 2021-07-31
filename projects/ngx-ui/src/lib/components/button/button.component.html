@@ -1,5 +1,6 @@
-<ngx-ui-icon [class]="'ngx-ui-button-icon-' + iconPosition"
+<ngx-ui-icon [class]="'ngx-ui-button-icon-' + (iconPosition || 'left')"
              [icon]="icon"
-             [brush]="brush"
+             [brush]="iconBrush"
+             [animation]="iconAnimation"
              *ngIf="icon !== null"></ngx-ui-icon>
 <ng-content></ng-content>

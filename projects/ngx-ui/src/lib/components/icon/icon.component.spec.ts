@@ -1,6 +1,7 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { ColorScheme, IconAnimation, IconBrush } from '../../common';
 import { IconModule } from './icon.module';
 
 let fixture: ComponentFixture<TestApp>;
@@ -16,45 +17,130 @@ describe('IconComponents', () => {
     TestBed.compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TestApp);
+  it('should apply class based on icon attribute', () => {
+    const fixture = TestBed.createComponent(TestApp);
+    const testComponent = fixture.debugElement.componentInstance;
+    const iconDebugElement = fixture.debugElement.query(By.css('ngx-ui-icon'));
 
+    testComponent.icon = "plus";
     fixture.detectChanges();
 
-    icons = fixture.debugElement.queryAll(By.css('ngx-ui-icon'));
-  })
+    expect(iconDebugElement.nativeElement.classList).toContain('fa-plus');
 
-  it('should support the icon input', () => {
-    expect(icons[0].nativeElement.classList).toContain('fa-plus');
+    testComponent.icon = "bell";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('fa-bell');
   });
 
-  it('should support the brush input', () => {
-    expect(icons[1].nativeElement.classList).toContain('far');
+  it('should apply class based on brush attribute', () => {
+    const fixture = TestBed.createComponent(TestApp);
+    const testComponent = fixture.debugElement.componentInstance;
+    const iconDebugElement = fixture.debugElement.query(By.css('ngx-ui-icon'));
+
+    testComponent.brush = "s";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('fas');
+
+    testComponent.brush = "r";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('far');
+
+    testComponent.brush = null;
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('fas');
   });
 
-  it('should support the fw input', () => {
-    expect(icons[2].nativeElement.classList).not.toContain('fa-fw');
-    expect(icons[3].nativeElement.classList).toContain('fa-fw');
+  it('should apply class based on fw attribute', () => {
+    const fixture = TestBed.createComponent(TestApp);
+    const testComponent = fixture.debugElement.componentInstance;
+    const iconDebugElement = fixture.debugElement.query(By.css('ngx-ui-icon'));
+
+    testComponent.fw = true;
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('fa-fw');
+
+    testComponent.fw = false
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).not.toContain('fa-fw');
+
+    testComponent.fw = null;
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('fa-fw');
   });
 
-  it('should support the color input', () => {
-    expect(icons[4].nativeElement.classList).toContain('ngx-ui-fgc-error');
+  it('should apply class based on color attribute', () => {
+    const fixture = TestBed.createComponent(TestApp);
+    const testComponent = fixture.debugElement.componentInstance;
+    const iconDebugElement = fixture.debugElement.query(By.css('ngx-ui-icon'));
+
+    testComponent.color = "primary";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('ngx-ui-fgc-primary');
+
+    testComponent.color = "success";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('ngx-ui-fgc-success');
+
+    testComponent.color = "information";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('ngx-ui-fgc-information');
+
+    testComponent.color = "warning";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('ngx-ui-fgc-warning');
+
+    testComponent.color = "error";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('ngx-ui-fgc-error');
   });
 
-  it('should support the animation input', () => {
-    expect(icons[5].nativeElement.classList).toContain('fa-pulse');
+  it('should apply class based on animation attribute', () => {
+    const fixture = TestBed.createComponent(TestApp);
+    const testComponent = fixture.debugElement.componentInstance;
+    const iconDebugElement = fixture.debugElement.query(By.css('ngx-ui-icon'));
+
+    testComponent.animation = "pulse";
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('fa-pulse');
+
+    testComponent.animation = "spin"
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).toContain('fa-spin');
+
+    testComponent.animation = null;
+    fixture.detectChanges();
+
+    expect(iconDebugElement.nativeElement.classList).not.toContain('fa-pulse');
+    expect(iconDebugElement.nativeElement.classList).not.toContain('fa-spin');
   });
 });
 
 @Component({
   selector: 'test-app',
   template: `
-    <ngx-ui-icon icon="plus"></ngx-ui-icon>
-    <ngx-ui-icon icon="plus" brush="r"></ngx-ui-icon>
-    <ngx-ui-icon icon="plus" [fw]="false"></ngx-ui-icon>
-    <ngx-ui-icon icon="plus" [fw]="true"></ngx-ui-icon>
-    <ngx-ui-icon icon="plus" color="error"></ngx-ui-icon>
-    <ngx-ui-icon icon="plus" animation="pulse"></ngx-ui-icon>
+    <ngx-ui-icon [icon]="icon" [brush]="brush" [fw]="fw" [color]="color" [animation]="animation"></ngx-ui-icon>
   `
 })
-class TestApp { }
+class TestApp {
+
+  public icon!: string;
+  public brush!: IconBrush;
+  public fw!: boolean;
+  public color!: ColorScheme;
+  public animation!: IconAnimation;
+
+}

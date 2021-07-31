@@ -1,7 +1,7 @@
 [ngx-ui-button] {
   box-sizing: border-box;
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   border: 1px solid;
   border-bottom-width: 3px;
@@ -14,6 +14,13 @@
   font-weight: 500;
   box-shadow: 0 3px 1px -2px var(--ngx-ui-neutral-light);
   gap: .75rem;
+
+  &.ngx-ui-button-light {
+    padding: 0;
+    border-width: 0;
+    box-shadow: none;
+    gap: .5rem;
+  }
 
   .ngx-ui-button-icon-left {
     order: 0;
@@ -64,20 +71,42 @@
     color: var(--ngx-ui-primary-ultra-light);
     border-color: var(--ngx-ui-primary-ultra-dark);
 
-    &:not([disabled]) {
-      &:focus,
-      &:hover {
-        background-color: var(--ngx-ui-primary-dark);
+    &:not(.ngx-ui-button-light) {
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          background-color: var(--ngx-ui-primary-dark);
+        }
+
+        &:active {
+          background-color: var(--ngx-ui-primary-darker);
+        }
       }
 
-      &:active {
-        background-color: var(--ngx-ui-primary-darker);
+      &:disabled {
+        background-color: var(--ngx-ui-primary-light);
+        color: var(--ngx-ui-primary-super-light);
       }
     }
 
-    &:disabled {
-      background-color: var(--ngx-ui-primary-light);
-      color: var(--ngx-ui-primary-super-light);
+    &.ngx-ui-button-light {
+      background-color: transparent;
+      color: var(--ngx-ui-primary);
+
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          color: var(--ngx-ui-primary-darker);
+        }
+
+        &:active {
+          color: var(--ngx-ui-primary-super-dark);
+        }
+      }
+
+      &:disabled {
+        color: var(--ngx-ui-neutral-light);
+      }
     }
   }
 
@@ -86,20 +115,41 @@
     color: var(--ngx-ui-primary-ultra-dark);
     border-color: var(--ngx-ui-primary-ultra-dark);
 
-    &:not([disabled]) {
-      &:focus,
-      &:hover {
-        text-decoration: underline dotted;
+    &:not(.ngx-ui-button-light) {
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          text-decoration: underline dotted;
+        }
+
+        &:active {
+          text-decoration-style: dashed;
+        }
       }
 
-      &:active {
-        text-decoration-style: dashed;
+      &:disabled {
+        border-color: var(--ngx-ui-primary-dark);
+        color: var(--ngx-ui-primary-light);
       }
     }
 
-    &:disabled {
-      border-color: var(--ngx-ui-primary-dark);
+    &.ngx-ui-button-light {
       color: var(--ngx-ui-primary-light);
+
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          color: var(--ngx-ui-primary-dark);
+        }
+
+        &:active {
+          color: var(--ngx-ui-primary-darker);
+        }
+      }
+
+      &:disabled {
+        color: var(--ngx-ui-neutral-light);
+      }
     }
   }
 
@@ -108,20 +158,42 @@
     color: var(--ngx-ui-success-ultra-light);
     border-color: var(--ngx-ui-success-ultra-dark);
 
-    &:not([disabled]) {
-      &:focus,
-      &:hover {
-        background-color: var(--ngx-ui-success-dark);
+    &:not(.ngx-ui-button-light) {
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          background-color: var(--ngx-ui-success-dark);
+        }
+
+        &:active {
+          background-color: var(--ngx-ui-success-darker);
+        }
       }
 
-      &:active {
-        background-color: var(--ngx-ui-success-darker);
+      &:disabled {
+        background-color: var(--ngx-ui-success-light);
+        color: var(--ngx-ui-success-super-light);
       }
     }
 
-    &:disabled {
-      background-color: var(--ngx-ui-success-light);
-      color: var(--ngx-ui-success-super-light);
+    &.ngx-ui-button-light {
+      background-color: transparent;
+      color: var(--ngx-ui-success);
+
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          color: var(--ngx-ui-success-darker);
+        }
+
+        &:active {
+          color: var(--ngx-ui-success-super-dark);
+        }
+      }
+
+      &:disabled {
+        color: var(--ngx-ui-neutral-light);
+      }
     }
   }
 
@@ -130,20 +202,42 @@
     color: var(--ngx-ui-information-ultra-light);
     border-color: var(--ngx-ui-information-ultra-dark);
 
-    &:not([disabled]) {
-      &:focus,
-      &:hover {
-        background-color: var(--ngx-ui-information-dark);
+    &:not(.ngx-ui-button-light) {
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          background-color: var(--ngx-ui-information-dark);
+        }
+
+        &:active {
+          background-color: var(--ngx-ui-information-darker);
+        }
       }
 
-      &:active {
-        background-color: var(--ngx-ui-information-darker);
+      &:disabled {
+        background-color: var(--ngx-ui-information-light);
+        color: var(--ngx-ui-information-super-light);
       }
     }
 
-    &:disabled {
-      background-color: var(--ngx-ui-information-light);
-      color: var(--ngx-ui-information-super-light);
+    &.ngx-ui-button-light {
+      background-color: transparent;
+      color: var(--ngx-ui-information);
+
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          color: var(--ngx-ui-information-darker);
+        }
+
+        &:active {
+          color: var(--ngx-ui-information-super-dark);
+        }
+      }
+
+      &:disabled {
+        color: var(--ngx-ui-neutral-light);
+      }
     }
   }
 
@@ -152,20 +246,42 @@
     color: var(--ngx-ui-warning-ultra-light);
     border-color: var(--ngx-ui-warning-ultra-dark);
 
-    &:not([disabled]) {
-      &:focus,
-      &:hover {
-        background-color: var(--ngx-ui-warning-dark);
+    &:not(.ngx-ui-button-light) {
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          background-color: var(--ngx-ui-warning-dark);
+        }
+
+        &:active {
+          background-color: var(--ngx-ui-warning-darker);
+        }
       }
 
-      &:active {
-        background-color: var(--ngx-ui-warning-darker);
+      &:disabled {
+        background-color: var(--ngx-ui-warning-light);
+        color: var(--ngx-ui-warning-super-light);
       }
     }
 
-    &:disabled {
-      background-color: var(--ngx-ui-warning-light);
-      color: var(--ngx-ui-warning-super-light);
+    &.ngx-ui-button-light {
+      background-color: transparent;
+      color: var(--ngx-ui-warning);
+
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          color: var(--ngx-ui-warning-darker);
+        }
+
+        &:active {
+          color: var(--ngx-ui-warning-super-dark);
+        }
+      }
+
+      &:disabled {
+        color: var(--ngx-ui-neutral-light);
+      }
     }
   }
 
@@ -174,20 +290,42 @@
     color: var(--ngx-ui-error-ultra-light);
     border-color: var(--ngx-ui-error-ultra-dark);
 
-    &:not([disabled]) {
-      &:focus,
-      &:hover {
-        background-color: var(--ngx-ui-error-dark);
+    &:not(.ngx-ui-button-light) {
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          background-color: var(--ngx-ui-error-dark);
+        }
+
+        &:active {
+          background-color: var(--ngx-ui-error-darker);
+        }
       }
 
-      &:active {
-        background-color: var(--ngx-ui-error-darker);
+      &:disabled {
+        background-color: var(--ngx-ui-error-light);
+        color: var(--ngx-ui-error-super-light);
       }
     }
 
-    &:disabled {
-      background-color: var(--ngx-ui-error-light);
-      color: var(--ngx-ui-error-super-light);
+    &.ngx-ui-button-light {
+      background-color: transparent;
+      color: var(--ngx-ui-error);
+
+      &:not([disabled]) {
+        &:focus,
+        &:hover {
+          color: var(--ngx-ui-error-darker);
+        }
+
+        &:active {
+          color: var(--ngx-ui-error-super-dark);
+        }
+      }
+
+      &:disabled {
+        color: var(--ngx-ui-neutral-light);
+      }
     }
   }
 }

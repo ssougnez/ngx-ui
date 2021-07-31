@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { ColorScheme, IconBrush, Size } from '../../common';
+import { ColorScheme, IconAnimation, IconBrush, Size } from '../../common';
 
 @Component({
   selector: '[ngx-ui-button]',
@@ -8,7 +8,9 @@ import { ColorScheme, IconBrush, Size } from '../../common';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    '[class]': '"ngx-ui-button-" + color + " ngx-ui-button-" + size'
+    '[class]': '"ngx-ui-button-" + (color || "primary") + " ngx-ui-button-" + (size || "auto")',
+    '[class.ngx-ui-button-light]': 'light === true',
+    '[attr.disabled]': 'isDisabled === true ? "disabled" : null'
   }
 })
 export class ButtonComponent {
@@ -19,15 +21,24 @@ export class ButtonComponent {
   public color: ColorScheme | 'secondary' = 'primary';
 
   @Input()
+  public light = false;
+
+  @Input()
   public size: Size = 'auto';
 
   @Input()
   public icon: string | null = null;
 
   @Input()
-  public brush: IconBrush = 's';
+  public iconBrush: IconBrush = 's';
 
   @Input()
   public iconPosition: 'left' | 'right' = 'left';
+
+  @Input()
+  public iconAnimation: IconAnimation | null = null;
+
+  @Input()
+  public isDisabled = false;
 
 }
