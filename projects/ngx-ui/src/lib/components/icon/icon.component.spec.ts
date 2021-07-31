@@ -4,9 +4,6 @@ import { By } from '@angular/platform-browser';
 import { ColorScheme, IconAnimation, IconBrush } from '../../common';
 import { IconModule } from './icon.module';
 
-let fixture: ComponentFixture<TestApp>;
-let icons: DebugElement[];
-
 describe('IconComponents', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({

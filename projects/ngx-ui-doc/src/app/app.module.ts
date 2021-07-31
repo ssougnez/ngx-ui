@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ButtonModule, IconModule } from '@ngx-ui';
+import { ButtonModule, IconModule, BadgeModule } from '@ngx-ui';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    IconModule
+    IconModule,
+    BadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

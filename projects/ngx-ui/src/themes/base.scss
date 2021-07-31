@@ -4,20 +4,60 @@
   color: var(--ngx-ui-primary);
 }
 
-.ngx-ui-fgc-information {
-  color: var(--ngx-ui-information);
+.ngx-ui-bgc-primary {
+  background-color: var(--ngx-ui-primary);
+}
+
+.ngx-ui-brc-primary {
+  border-color: var(--ngx-ui-primary-darker);
 }
 
 .ngx-ui-fgc-success {
   color: var(--ngx-ui-success);
 }
 
+.ngx-ui-bgc-success {
+  background-color: var(--ngx-ui-success);
+}
+
+.ngx-ui-brc-success {
+  border-color: var(--ngx-ui-success-darker);
+}
+
+.ngx-ui-fgc-information {
+  color: var(--ngx-ui-information);
+}
+
+.ngx-ui-bgc-information {
+  background-color: var(--ngx-ui-information);
+}
+
+.ngx-ui-brc-information {
+  border-color: var(--ngx-ui-information-darker);
+}
+
 .ngx-ui-fgc-warning {
   color: var(--ngx-ui-warning);
 }
 
+.ngx-ui-bgc-warning {
+  background-color: var(--ngx-ui-warning);
+}
+
+.ngx-ui-brc-warning {
+  border-color: var(--ngx-ui-warning-darker);
+}
+
 .ngx-ui-fgc-error {
   color: var(--ngx-ui-error);
+}
+
+.ngx-ui-bgc-error {
+  background-color: var(--ngx-ui-error);
+}
+
+.ngx-ui-brc-error {
+  border-color: var(--ngx-ui-error-darker);
 }
 
 /********************************************************** FLEX **********************************************************/

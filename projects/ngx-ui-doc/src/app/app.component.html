@@ -82,3 +82,19 @@
   <button ngx-ui-button color="warning" size="xl">xl</button>
   <button ngx-ui-button color="error" size="fw">fw</button>
 </div>
+
+<h1>Badges</h1>
+
+<div class="flex-row gap-1 mb-1">
+  <ngx-ui-badge [value]="50" color="primary"></ngx-ui-badge>
+  <ngx-ui-badge [value]="50" color="success"></ngx-ui-badge>
+  <ngx-ui-badge [value]="50" color="information"></ngx-ui-badge>
+  <ngx-ui-badge [value]="50" color="warning"></ngx-ui-badge>
+  <ngx-ui-badge [value]="50" color="error"></ngx-ui-badge>
+</div>
+
+
+<div class="flex-row gap-1 mb-1">
+  <ngx-ui-badge [value]="50" [max]="100" color="primary"></ngx-ui-badge>
+  <ngx-ui-badge [value]="50" [max]="25" color="success"></ngx-ui-badge>
+</div>
