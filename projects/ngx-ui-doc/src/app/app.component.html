@@ -1,3 +1,32 @@
+<h1>Messages</h1>
+
+<div class="flex-column gap-1">
+  <ngx-ui-message color="primary">
+    <ng-container *ngx-ui-message-title>I'm the title</ng-container>
+    <ng-container *ngx-ui-message-content>I'm the content</ng-container>
+  </ngx-ui-message>
+
+  <ngx-ui-message color="success" icon="check-circle" iconBrush="r">
+    <ng-container *ngx-ui-message-title>I'm the title</ng-container>
+    <ng-container *ngx-ui-message-content>I'm the content</ng-container>
+  </ngx-ui-message>
+
+  <ngx-ui-message color="information" icon="info">
+    <ng-container *ngx-ui-message-title>I'm the title</ng-container>
+    <ng-container *ngx-ui-message-content>I'm the content</ng-container>
+  </ngx-ui-message>
+
+  <ngx-ui-message color="warning" icon="exclamation">
+    <ng-container *ngx-ui-message-title>I'm the title</ng-container>
+    <ng-container *ngx-ui-message-content>I'm the content</ng-container>
+  </ngx-ui-message>
+
+  <ngx-ui-message color="error" icon="times" [dismissable]="true">
+    <ng-container *ngx-ui-message-title>I'm the title</ng-container>
+    <ng-container *ngx-ui-message-content>I'm the content</ng-container>
+  </ngx-ui-message>
+</div>
+
 <h1>Icons</h1>
 
 <div class="flex-row gap-1">

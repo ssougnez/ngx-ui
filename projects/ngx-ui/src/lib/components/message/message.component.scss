@@ -1,0 +1,180 @@
+ngx-ui-message {
+  display: flex;
+  flex-direction: row;
+  box-shadow: .15rem .15rem .3rem .1rem var(--ng-ui-neutral-super-light);
+  border: 1px solid transparent;
+  box-sizing: border-box;
+
+  .ngx-ui-message-icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+
+    .ng-ui-message-icon {
+      font-size: 2rem;
+    }
+  }
+
+  .ngx-ui-message-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    flex: 1;
+
+    .ngx-ui-message-title {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: .9rem;
+      margin-bottom: .4rem
+    }
+  }
+
+  .ngx-ui-message-cross {
+    padding: 1rem;
+
+    .ngx-ui-message-cross-icon {
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &.ngx-ui-message-primary {
+    border-color: var(--ngx-ui-primary-dark);
+
+    .ngx-ui-message-icon-container {
+      color: var(--ngx-ui-primary-ultra-light);
+      background-color: var(--ngx-ui-primary);
+    }
+
+    .ngx-ui-message-content {
+      background-color: var(--ngx-ui-primary-super-light);
+      color: var(--ngx-ui-primary-ultra-dark);
+    }
+
+    .ngx-ui-message-cross {
+      background-color: var(--ngx-ui-primary-super-light);
+
+      .ngx-ui-message-cross-icon {
+        color: var(--ngx-ui-primary);
+
+        &:hover,
+        &:focus {
+          color: var(--ngx-ui-primary-darker);
+        }
+      }
+    }
+  }
+
+  &.ngx-ui-message-success {
+    border-color: var(--ngx-ui-success-dark);
+
+    .ngx-ui-message-icon-container {
+      color: var(--ngx-ui-success-ultra-light);
+      background-color: var(--ngx-ui-success);
+    }
+
+    .ngx-ui-message-content {
+      background-color: var(--ngx-ui-success-super-light);
+      color: var(--ngx-ui-success-ultra-dark);
+    }
+
+    .ngx-ui-message-cross {
+      background-color: var(--ngx-ui-success-super-light);
+
+      .ngx-ui-message-cross-icon {
+        color: var(--ngx-ui-success);
+
+        &:hover,
+        &:focus {
+          color: var(--ngx-ui-success-darker);
+        }
+      }
+    }
+  }
+
+  &.ngx-ui-message-information {
+    border-color: var(--ngx-ui-information-dark);
+
+    .ngx-ui-message-icon-container {
+      color: var(--ngx-ui-information-ultra-light);
+      background-color: var(--ngx-ui-information);
+    }
+
+    .ngx-ui-message-content {
+      background-color: var(--ngx-ui-information-super-light);
+      color: var(--ngx-ui-information-ultra-dark);
+    }
+
+    .ngx-ui-message-cross {
+      background-color: var(--ngx-ui-information-super-light);
+
+      .ngx-ui-message-cross-icon {
+        color: var(--ngx-ui-information);
+
+        &:hover,
+        &:focus {
+          color: var(--ngx-ui-information-darker);
+        }
+      }
+    }
+  }
+
+  &.ngx-ui-message-warning {
+    border-color: var(--ngx-ui-warning-dark);
+
+    .ngx-ui-message-icon-container {
+      color: var(--ngx-ui-warning-ultra-light);
+      background-color: var(--ngx-ui-warning);
+    }
+
+    .ngx-ui-message-content {
+      background-color: var(--ngx-ui-warning-super-light);
+      color: var(--ngx-ui-warning-ultra-dark);
+    }
+
+    .ngx-ui-message-cross {
+      background-color: var(--ngx-ui-warning-super-light);
+
+      .ngx-ui-message-cross-icon {
+        color: var(--ngx-ui-warning);
+
+        &:hover,
+        &:focus {
+          color: var(--ngx-ui-warning-darker);
+        }
+      }
+    }
+  }
+
+  &.ngx-ui-message-error {
+    border-color: var(--ngx-ui-error-dark);
+
+    .ngx-ui-message-icon-container {
+      color: var(--ngx-ui-error-ultra-light);
+      background-color: var(--ngx-ui-error);
+    }
+
+    .ngx-ui-message-content {
+      background-color: var(--ngx-ui-error-super-light);
+      color: var(--ngx-ui-error-ultra-dark);
+    }
+
+    .ngx-ui-message-cross {
+      background-color: var(--ngx-ui-error-super-light);
+
+      .ngx-ui-message-cross-icon {
+        color: var(--ngx-ui-error);
+
+        &:hover,
+        &:focus {
+          color: var(--ngx-ui-error-darker);
+        }
+      }
+    }
+  }
+}

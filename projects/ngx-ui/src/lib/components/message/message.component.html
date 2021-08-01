@@ -1,0 +1,17 @@
+<div class="ngx-ui-message-icon-container" *ngIf="!!icon">
+  <ngx-ui-icon class="ng-ui-message-icon" [icon]="icon" [brush]="iconBrush"></ngx-ui-icon>
+</div>
+<div class="ngx-ui-message-content">
+  <div class="ngx-ui-message-title" *ngIf="!!titleDirective">
+    <ng-container *ngTemplateOutlet="titleDirective.templateRef"></ng-container>
+  </div>
+  <div *ngIf="!!contentDirective">
+    <ng-container *ngTemplateOutlet="contentDirective.templateRef"></ng-container>
+  </div>
+</div>
+<div class="ngx-ui-message-cross" *ngIf="dismissable === true">
+  <ngx-ui-icon icon="times"
+               class="ngx-ui-message-cross-icon"
+               ngx-ui-clickable
+               (used)="dismiss()"></ngx-ui-icon>
+</div>
