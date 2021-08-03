@@ -1,3 +1,91 @@
+<h1>Accordion</h1>
+
+<div class="flex-column gap-1">
+  <ngx-ui-accordion color="primary">
+    <ngx-ui-accordion-item icon="bell">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title I</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content I</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="exclamation-circle">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title III</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="bath">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title III</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="cloud">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title IV</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content IV</ng-container>
+    </ngx-ui-accordion-item>
+  </ngx-ui-accordion>
+
+  <ngx-ui-accordion color="success" behavior="single">
+    <ngx-ui-accordion-item icon="bell">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title I</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content I</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="exclamation-circle">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title II</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+  </ngx-ui-accordion>
+
+  <ngx-ui-accordion color="information" iconExpanded="chevron-circle-up" iconCollapsed="chevron-circle-down">
+    <ngx-ui-accordion-item icon="bell">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title I</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content I</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="exclamation-circle">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title II</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+  </ngx-ui-accordion>
+
+  <ngx-ui-accordion color="warning" iconExpanded="arrow-alt-circle-up" iconCollapsed="arrow-alt-circle-down" iconBrush="r">
+    <ngx-ui-accordion-item icon="bell">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title I</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content I</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="circle">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title II</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+  </ngx-ui-accordion>
+
+  <ngx-ui-accordion color="error">
+    <ngx-ui-accordion-item icon="bell">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title I</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content I</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="exclamation-circle" initialState="collapsed">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title II</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+  </ngx-ui-accordion>
+
+  <ngx-ui-accordion color="neutral" (itemStateChanged)="foo($event)">
+    <ngx-ui-accordion-item icon="bell">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title I</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content I</ng-container>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="exclamation-circle">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title II</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+  </ngx-ui-accordion>
+
+  <ngx-ui-accordion color="none">
+    <ngx-ui-accordion-item icon="bell">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title I</ng-container>
+      <div *ngx-ui-accordion-item-content>I'm the content I</div>
+    </ngx-ui-accordion-item>
+    <ngx-ui-accordion-item icon="exclamation-circle">
+      <ng-container *ngx-ui-accordion-item-title>I'm the title II</ng-container>
+      <ng-container *ngx-ui-accordion-item-content>I'm the content II</ng-container>
+    </ngx-ui-accordion-item>
+  </ngx-ui-accordion>
+</div>
 <h1>Messages</h1>
 
 <div class="flex-column gap-1">

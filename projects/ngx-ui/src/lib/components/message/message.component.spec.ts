@@ -129,11 +129,31 @@ describe('MessageComponents', () => {
     expect(messageDebugElement.nativeElement.classList).toContain('ngx-ui-hidden');
   });
 
+  it('should insert the title', () => {
+    const title = "I'm the title";
+    const fixture = TestBed.createComponent(TestApp);
+    const testComponent = fixture.debugElement.componentInstance;
 
+    testComponent.title = title;
+    fixture.detectChanges();
 
+    let titleDebugElement = fixture.debugElement.query(By.css('.ngx-ui-message-title'));
 
+    expect(titleDebugElement.nativeElement.innerText).toEqual(title.toUpperCase());
+  });
 
+  it('should insert the content', () => {
+    const content = "I'm the content";
+    const fixture = TestBed.createComponent(TestApp);
+    const testComponent = fixture.debugElement.componentInstance;
 
+    testComponent.content = content;
+    fixture.detectChanges();
+
+    let contentDebugElement = fixture.debugElement.query(By.css('.ngx-ui-message-content'));
+
+    expect(contentDebugElement.nativeElement.innerText).toEqual(content);
+  });
 
 });
 

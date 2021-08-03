@@ -1,3 +1,6 @@
+export * from './lib/components/accordion/accordion.component';
+export * from './lib/components/accordion/accordion.module';
+
 export * from './lib/components/badge/badge.component';
 export * from './lib/components/badge/badge.module';
 
