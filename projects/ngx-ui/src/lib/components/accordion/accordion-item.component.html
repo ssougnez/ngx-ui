@@ -1,21 +1,21 @@
 <div class="ngx-ui-accordion-item-header"
      ngx-ui-clickable
-     [attr.aria-expanded]="state === 'expanded' ? 'true' : 'false'"
+     [attr.aria-expanded]="_state === 'expanded' ? 'true' : 'false'"
      [attr.aria-controls]="uid"
-     (blur)="focusChanged(false)"
-     (focus)="focusChanged(true)"
-     (used)="updateState(state === 'expanded' ? 'collapsed' : 'expanded')">
+     (blur)="_focusChanged(false)"
+     (focus)="_focusChanged(true)"
+     (used)="updateState(_state === 'expanded' ? 'collapsed' : 'expanded')">
   <ngx-ui-icon class="ngx-ui-accordion-item-header-icon" [icon]="icon" [brush]="parent.iconBrush" *ngIf="!!icon"></ngx-ui-icon>
   <div class="ngx-ui-accordion-item-header-label" [id]="uid + '-label'">
     <ng-container *ngTemplateOutlet="titleDirective.templateRef"></ng-container>
   </div>
-  <ngx-ui-icon [icon]="parent.iconCollapsed" [brush]="parent.iconBrush" *ngIf="state === 'collapsed'"></ngx-ui-icon>
-  <ngx-ui-icon [icon]="parent.iconExpanded" [brush]="parent.iconBrush" *ngIf="state === 'expanded'"></ngx-ui-icon>
+  <ngx-ui-icon [icon]="parent.iconCollapsed" [brush]="parent.iconBrush" *ngIf="_state === 'collapsed'"></ngx-ui-icon>
+  <ngx-ui-icon [icon]="parent.iconExpanded" [brush]="parent.iconBrush" *ngIf="_state === 'expanded'"></ngx-ui-icon>
 </div>
 <div role="region"
      class="ngx-ui-accordion-item-content"
      [id]="uid"
      [attr.aria-labelledby]="uid + '-label'"
-     [class.ngx-ui-accordion-item-content-collapsed]="state === 'collapsed'">
+     [class.ngx-ui-accordion-item-content-collapsed]="_state === 'collapsed'">
   <ng-container *ngTemplateOutlet="contentDirective.templateRef"></ng-container>
 </div>
