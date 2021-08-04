@@ -28,10 +28,6 @@ ngx-ui-accordion {
   .ngx-ui-accordion-item-content {
     border-bottom: 1px solid var(--ngx-ui-neutral-super-light);
     padding: 1rem;
-
-    &.ngx-ui-accordion-item-content-collapsed {
-      display: none;
-    }
   }
 
   &.ngx-ui-accordion-primary {

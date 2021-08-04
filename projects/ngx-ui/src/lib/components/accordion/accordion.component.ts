@@ -1,9 +1,6 @@
 import { AfterContentInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ContentChild, ContentChildren, Directive, ElementRef, EventEmitter, forwardRef, Input, OnInit, Output, QueryList, TemplateRef, ViewEncapsulation } from '@angular/core';
-import { ColorScheme, IconBrush } from '../../common';
+import { AccordionItemState, AccordionStateBehavior, ColorScheme, IconBrush } from '../../common';
 import { FocusPosition } from '../../internal/enumerations';
-
-type ItemState = 'expanded' | 'collapsed';
-type StateBehavior = 'single' | 'multiple';
 
 export type AccordionItemStateChangedEventData = {
   item: AccordionItemComponent;
@@ -35,11 +32,7 @@ export class AccordionItemContentDirective {
   template: '<ng-content></ng-content>',
   styleUrls: ['./accordion.component.scss'],
   host: {
-    '[class]': '"ngx-ui-accordion-" + (color || "primary")',
-    '(keydown.home)': '_moveFocus(_FocusPosition.First, $event)',
-    '(keydown.end)': '_moveFocus(_FocusPosition.Last, $event)',
-    '(keydown.arrowdown)': '_moveFocus(_FocusPosition.Next, $event)',
-    '(keydown.arrowup)': '_moveFocus(_FocusPosition.Previous, $event)'
+    '[class]': '"ngx-ui-accordion-" + (color || "primary")'
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
@@ -49,7 +42,7 @@ export class AccordionComponent implements AfterContentInit {
   /****************************************************************** BINDINGS ******************************************************************/
 
   @Input()
-  public behavior: StateBehavior = 'multiple';
+  public behavior: AccordionStateBehavior = 'multiple';
 
   @Input()
   public color: ColorScheme | 'neutral' | 'none' = 'primary';
@@ -68,10 +61,6 @@ export class AccordionComponent implements AfterContentInit {
 
   @ContentChildren(forwardRef(() => AccordionItemComponent))
   public children!: QueryList<AccordionItemComponent>;
-
-  /****************************************************************** ENUMERATIONS ******************************************************************/
-
-  public _FocusPosition: typeof FocusPosition = FocusPosition;
 
   /****************************************************************** LIFE CYCLE ******************************************************************/
 
@@ -104,7 +93,7 @@ export class AccordionComponent implements AfterContentInit {
    * @param position
    * @param event
    */
-  public _moveFocus(position: FocusPosition, event: KeyboardEvent) {
+  public _moveFocus(position: FocusPosition, event: Event) {
     if (this.children.length !== 0) {
       const children = this.children.toArray();
       const focusedIndex = children.findIndex(c => c._hasFocus === true);
@@ -141,7 +130,7 @@ export class AccordionComponent implements AfterContentInit {
   templateUrl: './accordion-item.component.html',
   host: {
     'class': 'ngx-ui-accordion-item',
-    '[class.ngx-ui-accordion-item-expanded]': 'state === "expanded"'
+    '[class.ngx-ui-accordion-item-expanded]': '_state === "expanded"'
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
@@ -157,7 +146,7 @@ export class AccordionItemComponent implements OnInit {
   public icon: string | null = null;
 
   @Input()
-  public initialState: ItemState = 'expanded';
+  public initialState: AccordionItemState = 'expanded';
 
   @ContentChild(AccordionItemTitleDirective)
   public titleDirective!: AccordionItemTitleDirective;
@@ -168,7 +157,11 @@ export class AccordionItemComponent implements OnInit {
   /****************************************************************** VARIABLES ******************************************************************/
 
   public _hasFocus = false;
-  public _state: ItemState = 'expanded';
+  public _state: AccordionItemState = 'expanded';
+
+  /****************************************************************** ENUMERATIONS ******************************************************************/
+
+  public _FocusPosition: typeof FocusPosition = FocusPosition;
 
   /****************************************************************** LIFE CYCLE ******************************************************************/
 
@@ -198,7 +191,7 @@ export class AccordionItemComponent implements OnInit {
    * 
    * @param state
    */
-  public _updateState(state: ItemState) {
+  public _updateState(state: AccordionItemState) {
     if (this._state !== state) {
       this._state = state;
 

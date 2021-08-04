@@ -4,7 +4,11 @@
      [attr.aria-controls]="uid"
      (blur)="_focusChanged(false)"
      (focus)="_focusChanged(true)"
-     (used)="updateState(_state === 'expanded' ? 'collapsed' : 'expanded')">
+     (keydown.home)="parent._moveFocus(_FocusPosition.First, $event)"
+     (keydown.end)="parent._moveFocus(_FocusPosition.Last, $event)"
+     (keydown.arrowdown)="parent._moveFocus(_FocusPosition.Next, $event)"
+     (keydown.arrowup)="parent._moveFocus(_FocusPosition.Previous, $event)"
+     (used)="_updateState(_state === 'expanded' ? 'collapsed' : 'expanded')">
   <ngx-ui-icon class="ngx-ui-accordion-item-header-icon" [icon]="icon" [brush]="parent.iconBrush" *ngIf="!!icon"></ngx-ui-icon>
   <div class="ngx-ui-accordion-item-header-label" [id]="uid + '-label'">
     <ng-container *ngTemplateOutlet="titleDirective.templateRef"></ng-container>
@@ -16,6 +20,6 @@
      class="ngx-ui-accordion-item-content"
      [id]="uid"
      [attr.aria-labelledby]="uid + '-label'"
-     [class.ngx-ui-accordion-item-content-collapsed]="_state === 'collapsed'">
+     [class.ngx-ui-hidden]="_state === 'collapsed'">
   <ng-container *ngTemplateOutlet="contentDirective.templateRef"></ng-container>
 </div>
